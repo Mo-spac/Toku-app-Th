@@ -1,7 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/components/number_item.dart';
+import 'package:toku_app/models/number_model.dart';
 
 class NumbersView extends StatelessWidget {
-  const NumbersView({super.key});
+  NumbersView({super.key});
+
+  final List<Number> numbers = [
+    Number(
+      jpName: 'ichi',
+      enName: 'one',
+      image: 'assets/images/numbers/number_one.png',
+    ),
+    Number(
+      jpName: 'Ni',
+      enName: 'two',
+      image: 'assets/images/numbers/number_two.png',
+    ),
+    Number(
+      jpName: 'San',
+      enName: 'three',
+      image: 'assets/images/numbers/number_three.png',
+    ),
+    Number(
+      jpName: 'Shi',
+      enName: 'four',
+      image: 'assets/images/numbers/number_four.png',
+    ),
+    Number(
+      jpName: 'Go',
+      enName: 'five',
+      image: 'assets/images/numbers/number_five.png',
+    ),
+    Number(
+      jpName: 'Roku',
+      enName: 'six',
+      image: 'assets/images/numbers/number_six.png',
+    ),
+    Number(
+      jpName: 'Sebun',
+      enName: 'seven',
+      image: 'assets/images/numbers/number_seven.png',
+    ),
+    Number(
+      jpName: 'hachi',
+      enName: 'eight',
+      image: 'assets/images/numbers/number_eight.png',
+    ),
+    Number(
+      jpName: 'Kyū',
+      enName: 'nine',
+      image: 'assets/images/numbers/number_nine.png',
+    ),
+    Number(
+      jpName: 'Jū',
+      enName: 'ten',
+      image: 'assets/images/numbers/number_ten.png',
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -13,36 +68,38 @@ class NumbersView extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: Column(
+      body: ListView(
         children: [
-          Card(
-            color: Color(0xffEF9235),
-            child: ListTile(
-              leading: Container(
-                color: Colors.white,
-                child: Image.asset('assets/images/numbers/number_one.png'),
-              ),
-              title: Text(
-                'ichi',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-              subtitle: Text(
-                'One',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-              trailing: Icon(
-                Icons.play_arrow,
-                color: Colors.white,
-                size: 28,
-              ),
-            ),
-          )
+          NumberItem(
+            number: numbers[0],
+          ),
+          NumberItem(
+            number: numbers[1],
+          ),
+          NumberItem(
+            number: numbers[2],
+          ),
+          NumberItem(
+            number: numbers[3],
+          ),
+          NumberItem(
+            number: numbers[4],
+          ),
+          NumberItem(
+            number: numbers[5],
+          ),
+          NumberItem(
+            number: numbers[6],
+          ),
+          NumberItem(
+            number: numbers[7],
+          ),
+          NumberItem(
+            number: numbers[8],
+          ),
+          NumberItem(
+            number: numbers[numbers.length - 1],
+          ),
         ],
       ),
     );
