@@ -11,7 +11,10 @@ class HomeView extends StatelessWidget {
       backgroundColor: Color(0xffFEF6DB),
       appBar: AppBar(
         backgroundColor: Color(0xff46322B),
-        title: Text("Toku"),
+        title: Text(
+          "Toku",
+          style: TextStyle(color: Colors.white),
+        ),
       ),
       body: Column(
         children: [
