@@ -31,10 +31,13 @@ class NumberItem extends StatelessWidget {
             fontSize: 18,
           ),
         ),
-        trailing: Icon(
-          Icons.play_arrow,
-          color: Colors.white,
-          size: 28,
+        trailing: IconButton(
+          onPressed: () {},
+          icon: Icon(
+            Icons.play_arrow,
+            color: Colors.white,
+            size: 28,
+          ),
         ),
       ),
     );
