@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toku_app/components/category_item.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -13,68 +14,20 @@ class HomeView extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            height: 65,
-            width: double.infinity,
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Numbers",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+          Category(
+            title: 'Numbers',
             color: Color(0xffEF9235),
           ),
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            height: 65,
-            width: double.infinity,
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "FamilyMembers",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+          Category(
+            title: 'FamilyMembers',
             color: Color(0xff558B37),
           ),
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            height: 65,
-            width: double.infinity,
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Colors",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+          Category(
+            title: 'Colors',
             color: Color(0xff79359F),
           ),
-          Container(
-            padding: EdgeInsets.only(left: 24),
-            height: 65,
-            width: double.infinity,
-            child: Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Phrases",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+          Category(
+            title: 'Phrases',
             color: Color(0xff50ADC7),
           ),
         ],
