@@ -68,40 +68,20 @@ class NumbersView extends StatelessWidget {
           style: TextStyle(color: Colors.white),
         ),
       ),
-      body: ListView(
-        children: [
-          NumberItem(
-            number: numbers[0],
-          ),
-          NumberItem(
-            number: numbers[1],
-          ),
-          NumberItem(
-            number: numbers[2],
-          ),
-          NumberItem(
-            number: numbers[3],
-          ),
-          NumberItem(
-            number: numbers[4],
-          ),
-          NumberItem(
-            number: numbers[5],
-          ),
-          NumberItem(
-            number: numbers[6],
-          ),
-          NumberItem(
-            number: numbers[7],
-          ),
-          NumberItem(
-            number: numbers[8],
-          ),
-          NumberItem(
-            number: numbers[numbers.length - 1],
-          ),
-        ],
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (context, index) {
+          return NumberItem(number: numbers[index]);
+        },
       ),
     );
   }
+}
+
+List<Widget> getList(List<Number> numbers) {
+  List<Widget> itemList = [];
+  for (var i = 0; i < numbers.length; i++) {
+    itemList.add(NumberItem(number: numbers[i]));
+  }
+  return itemList;
 }
