@@ -1,18 +1,20 @@
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
-import 'package:toku_app/models/number_model.dart';
+import 'package:toku_app/models/item_model.dart';
 
-class NumberItem extends StatelessWidget {
-  const NumberItem({
+class Item extends StatelessWidget {
+  const Item({
     super.key,
     required this.number,
+    required this.color,
   });
-  final Number number;
+  final ItemModel number;
+  final Color color;
 
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color(0xffEF9235),
+      color: color,
       child: ListTile(
         leading: Container(
           color: Colors.white,
