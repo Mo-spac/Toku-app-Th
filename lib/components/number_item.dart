@@ -35,10 +35,8 @@ class NumberItem extends StatelessWidget {
         trailing: IconButton(
           onPressed: () {
             final player = AudioPlayer();
-            // player
-            // .setSourceAsset('assets/sounds/numbers/number_eight_sound.mp3');
             player.play(
-              AssetSource('sounds/phrases/dont_forget_to_subscribe.wav'),
+              AssetSource(number.sound),
             );
           },
           icon: Icon(
