@@ -78,10 +78,10 @@ class NumbersView extends StatelessWidget {
   }
 }
 
-List<Widget> getList(List<Number> numbers) {
-  List<Widget> itemList = [];
-  for (var i = 0; i < numbers.length; i++) {
-    itemList.add(NumberItem(number: numbers[i]));
-  }
-  return itemList;
-}
+// List<Widget> getList(List<Number> numbers) {
+//   List<Widget> itemList = [];
+//   for (var i = 0; i < numbers.length; i++) {
+//     itemList.add(NumberItem(number: numbers[i]));
+//   }
+//   return itemList;
+// }

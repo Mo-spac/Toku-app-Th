@@ -1,3 +1,4 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/number_model.dart';
 
@@ -32,7 +33,14 @@ class NumberItem extends StatelessWidget {
           ),
         ),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            final player = AudioPlayer();
+            // player
+            // .setSourceAsset('assets/sounds/numbers/number_eight_sound.mp3');
+            player.play(
+              AssetSource('sounds/phrases/dont_forget_to_subscribe.wav'),
+            );
+          },
           icon: Icon(
             Icons.play_arrow,
             color: Colors.white,
