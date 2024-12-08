@@ -3,6 +3,7 @@ import 'package:toku_app/components/category_item.dart';
 import 'package:toku_app/views/colours_view.dart';
 import 'package:toku_app/views/family_members_view.dart';
 import 'package:toku_app/views/numbers_view.dart';
+import 'package:toku_app/views/phrases_view.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -57,7 +58,14 @@ class HomeView extends StatelessWidget {
             color: Color(0xff79359F),
           ),
           Category(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => PhrasesView(),
+                ),
+              );
+            },
             title: 'Phrases',
             color: Color(0xff50ADC7),
           ),

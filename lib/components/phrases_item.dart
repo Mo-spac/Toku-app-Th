@@ -2,12 +2,13 @@ import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 import 'package:toku_app/models/item_model.dart';
 
-class Item extends StatelessWidget {
-  const Item({
+class PhrasesItem extends StatelessWidget {
+  const PhrasesItem({
     super.key,
     required this.item,
     required this.color,
   });
+
   final ItemModel item;
   final Color color;
 
@@ -16,10 +17,6 @@ class Item extends StatelessWidget {
     return Card(
       color: color,
       child: ListTile(
-        leading: Container(
-          color: Colors.white,
-          child: Image.asset(item.image!),
-        ),
         title: Text(
           item.jpName,
           style: TextStyle(

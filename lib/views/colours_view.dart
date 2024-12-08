@@ -71,7 +71,7 @@ class ColoursView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Item(
             color: Color(0xff79359F),
-            number: colours[index],
+            item: colours[index],
           );
         },
       ),

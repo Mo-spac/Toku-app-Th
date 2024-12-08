@@ -83,7 +83,7 @@ class NumbersView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Item(
             color: Color(0xffEF9235),
-            number: numbers[index],
+            item: numbers[index],
           );
         },
       ),

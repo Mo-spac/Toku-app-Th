@@ -83,7 +83,7 @@ class FamilyMembersView extends StatelessWidget {
         itemBuilder: (context, index) {
           return Item(
             color: Color(0xff558B37),
-            number: familyMembers[index],
+            item: familyMembers[index],
           );
         },
       ),
